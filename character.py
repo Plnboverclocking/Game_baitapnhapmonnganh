@@ -52,7 +52,7 @@ class Player(pygame.sprite.Sprite):
                 normalized_y = 0
             if normalized_y > SCREEN_HEIGHT - self.rect.height:
                 normalized_y = SCREEN_HEIGHT - self.rect.height
-                
+                    
             # Cập nhật vị trí Y
             self.rect.y = normalized_y
         
