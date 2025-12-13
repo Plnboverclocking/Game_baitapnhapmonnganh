@@ -78,5 +78,5 @@ If you have built the project or downloaded the release, simply open `game.exe` 
 └── README.md           # Documentation
 ```
 ---
-##👨‍💻 Authors:
+**👨‍💻 Authors:**
 DUTVcore & TranHuuLai
