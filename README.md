@@ -1,82 +1,81 @@
-# 🍎 Fruit Catcher - Game Hứng Trái Cây
+# 🍎 Fruit Catcher
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
 ![Pygame](https://img.shields.io/badge/Pygame-Game%20Engine-red)
 ![Status](https://img.shields.io/badge/Status-Completed-green)
 
-> **Đồ án môn học:** Nhập môn ngành Kỹ thuật Máy tính  
-> **Trường:** Đại học Bách khoa - Đại học Đà Nẵng (DUT)  
-> **Tác giả:** DUTVcore & TranHuuLai
+> **Course Project:** Introduction to Computer Engineering  
+> **University:** Da Nang University of Science and Technology (DUT)
 
-## 📖 Giới thiệu
+## 📖 Introduction
 
-**Fruit Catcher** là một trò chơi giải trí vui nhộn được xây dựng bằng ngôn ngữ Python và thư viện Pygame. Người chơi sẽ điều khiển một chiếc xô để hứng các loại trái cây rơi xuống, tích lũy điểm số và sinh tồn qua các cấp độ khó tăng dần.
+**Fruit Catcher** is a fun arcade-style game built with Python and the Pygame library. Players control a bucket to catch falling fruits, accumulate scores, and survive through increasingly difficult levels.
 
-Dự án này minh họa cách xử lý va chạm (collision detection), quản lý trạng thái game (state management), đóng gói phần mềm (PyInstaller) và xử lý logic game theo hướng đối tượng.
+This project demonstrates fundamental game development concepts, including collision detection, state management, game loops, and software packaging using PyInstaller.
 
-## 🚀 Tính năng nổi bật
+## 🚀 Key Features
 
-Dựa trên mã nguồn hiện tại, game bao gồm các tính năng:
+* **4 Seasons System:** The background environment changes dynamically based on the score (Spring, Summer, Autumn, Winter).
+* **Special Items:**
+    * 🍌 **Banana:** Restores 1 life (Max 5 lives).
+    * 🍎 **Apple:** Activates a **Shield** for 3 seconds (blocks bombs).
+    * 💣 **Bomb:** Decreases life if caught (unless the shield is active).
+* **Visual Effects:** Floating text for scores/damage and visual indicators for the shield status.
+* **Progressive Difficulty:** Falling speed and fruit spawn rate increase as you level up.
+* **Audio:** Background music and sound effects for interactions (scoring, damage, game over).
 
-* **Hệ thống 4 Mùa:** Hình nền thay đổi theo điểm số (Xuân, Hạ, Thu, Đông) tạo cảm giác mới mẻ.
-* **Vật phẩm đa dạng:**
-    * 🍌 **Chuối:** Hồi phục 1 mạng (tối đa 5 mạng).
-    * 🍎 **Táo:** Kích hoạt **Khiên bảo vệ** trong 3 giây (chống bom).
-    * 🍉 **Dưa hấu / Dâu tây:** Cộng điểm thưởng.
-    * 💣 **Bom:** Trừ mạng nếu hứng phải (trừ khi đang có khiên).
-* **Hiệu ứng sinh động:** Hiệu ứng chữ bay (Floating Text) khi ăn điểm hoặc dính bom, vòng tròn bảo vệ khi có khiên.
-* **Độ khó tăng dần:** Tốc độ rơi và tần suất xuất hiện trái cây tăng lên theo cấp độ (Level).
-* **Âm thanh:** Nhạc nền và hiệu ứng âm thanh cho từng hành động (ăn điểm, nổ bom, game over).
+## 🛠️ Tech Stack
 
-## 🛠️ Công nghệ sử dụng
+* **Language:** Python
+* **Core Library:** Pygame (Graphics and Audio)
+* **Packaging:** PyInstaller (Executable creation)
 
-* **Ngôn ngữ:** Python
-* **Thư viện chính:** Pygame (Xử lý đồ họa và âm thanh)
-* **Công cụ đóng gói:** PyInstaller (Tạo file .exe để chạy không cần cài Python)
+## ⚙️ Installation & Usage
 
-## ⚙️ Cài đặt và Chạy game
+### Option 1: Run from Source Code
 
-### Cách 1: Chạy từ mã nguồn (Source Code)
-
-1.  **Clone repository:**
+1.  **Clone the repository:**
     ```bash
     git clone [https://github.com/DUTVcore/Game_baitapnhapmonnganh.git](https://github.com/DUTVcore/Game_baitapnhapmonnganh.git)
     cd Game_baitapnhapmonnganh
     ```
 
-2.  **Cài đặt thư viện:**
-    Yêu cầu máy đã cài Python. Chạy lệnh sau để cài `pygame`:
+2.  **Install dependencies:**
+    Ensure Python is installed, then run:
     ```bash
     pip install pygame
     ```
 
-3.  **Chạy game:**
+3.  **Run the game:**
     ```bash
     python game.py
     ```
 
-### Cách 2: Chạy file EXE (Windows)
+### Option 2: Run Executable (Windows)
 
-Nếu bạn đã build hoặc tải bản release, chỉ cần mở file `game.exe` trong thư mục `dist` để chơi ngay mà không cần cài đặt Python.
+If you have built the project or downloaded the release, simply open `game.exe` in the `dist` folder to play without installing Python.
+*(The `game.spec` configuration file is included for packaging resources)*.
 
-*(Để tự build file exe từ source, chạy lệnh: `pyinstaller game.spec`)*
+## 🎮 How to Play
 
-## 🎮 Hướng dẫn chơi
+* **Controls:** Use the **LEFT** (⬅️) and **RIGHT** (➡️) arrow keys to move the bucket.
+* **Rules:**
+    * Catch normal fruits: +1 Point.
+    * Catch Bananas: Heal +1 Heart.
+    * Catch Apples: Activate Shield (Temporary Invincibility).
+    * Avoid Bombs: Touching a bomb costs 1 life.
+    * Do not let fruits hit the ground (You lose a life if you miss).
+    * **Game Over** when you run out of lives.
 
-* **Di chuyển:** Sử dụng phím mũi tên **TRÁI** (⬅️) và **PHẢI** (➡️) để di chuyển xô.
-* **Mục tiêu:**
-    * Hứng trái cây để ghi điểm.
-    * Tránh né bom (nếu chạm bom sẽ mất 1 mạng).
-    * Đừng để trái cây rơi xuống đất (sẽ bị mất mạng).
-* **Game Over:** Trò chơi kết thúc khi bạn mất hết 3 mạng (hoặc 5 mạng nếu đã ăn chuối).
-
-## 📂 Cấu trúc thư mục
+## 📂 Project Structure
 
 ```text
-Game_baitapnhapmonnganh/
-├── imgs/               # Chứa hình ảnh (background, trái cây, icon)
-├── sounds/             # Chứa nhạc nền và hiệu ứng âm thanh
-├── game.py             # Mã nguồn chính của trò chơi
-├── settings.py         # File cấu hình (kích thước màn hình, màu sắc, đường dẫn)
-├── game.spec           # File cấu hình cho PyInstaller
-└── README.md           # Tài liệu hướng dẫn
+├── imgs/               # Images (backgrounds, fruits, icons)
+├── sounds/             # Background music and sound effects
+├── game.py             # Main game logic entry point
+├── settings.py         # Configuration (screen size, colors, items)
+├── game.spec           # PyInstaller configuration
+└── README.md           # Documentation
+
+👨‍💻 Authors
+DUTVcore & TranHuuLai
