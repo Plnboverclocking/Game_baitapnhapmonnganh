@@ -1,6 +1,6 @@
 # 🍎 FRUIT CATCHER - 2 PLAYER CHAOS
 
-![Python](https://img.shields.io/badge/Python-3.x-blue?style=flat&logo=python)
+![Python](https://img.shields.io/badge/Python-3.12.8-blue?style=flat&logo=python)
 ![Pygame](https://img.shields.io/badge/Made%20with-Pygame-red?style=flat&logo=pygame)
 ![Status](https://img.shields.io/badge/Status-Completed-success)
 
