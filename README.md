@@ -45,7 +45,7 @@ A fun, chaotic arcade fruit-catching game built with Python and Pygame. Features
 ## 📦 Installation & Setup
 
 ### Prerequisites
-* Python 3.x
+* Python 3.12.8
 * `pygame` library
 
 ### Installation Steps
